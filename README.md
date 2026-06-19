@@ -4,6 +4,7 @@ Simple inventory management system built with Flask and MySQL.
 
 ## Features
 
+- Login & Logout
 - Dashboard
 - Product CRUD
 - Supplier CRUD
