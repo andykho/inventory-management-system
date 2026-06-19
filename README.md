@@ -3,26 +3,24 @@
 Simple inventory management system built with Flask and MySQL.
 
 ## Features
-
-- Login & Logout
-- Dashboard
-- Product CRUD
-- Supplier CRUD
+* Login & Logout
+* Dashboard
+* Product CRUD
+* Supplier CRUD
 
 ## Tech Stack
+* Python
+* Flask
+* MySQL
+* Jinja2
 
-- Python
-- Flask
-- MySQL
-- Jinja2
+## Run
+1. Import schema.sql into MySQL
+2. Activate virtual environment (venv\Scripts\activate)
+3. Install requirements (pip install -r requirements.txt)
+4. Run application (python app.py)
+5. Open http://127.0.0.1:5000
 
-## Run Project
-
-1. Activate virtual environment (bash venv\Scripts\activate)
-2. Install requirements (pip install -r requirements.txt)
-3. Run app.py (python app.py)
-4. Open http://127.0.0.1:5000
-
-## Author
-
-Andy Kho
+## Default Account
+Username: admin
+Password: admin123
