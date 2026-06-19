@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Supplier</title>
+</head>
+<body>
+
+<h1>Edit Supplier</h1>
+
+<form method="POST">
+
+    <p>Name</p>
+    <input
+        type="text"
+        name="name"
+        value="{{ supplier.name }}"
+        required>
+
+    <p>Phone</p>
+    <input
+        type="text"
+        name="phone"
+        value="{{ supplier.phone }}">
+
+    <p>Address</p>
+
+    <textarea
+        name="address"
+        rows="4"
+        cols="40"
+        style="resize:none;">{{ supplier.address }}</textarea>
+
+    <br><br>
+
+    <button type="submit">
+        Update Supplier
+    </button>
+
+</form>
+
+<br>
+
+<a href="/suppliers">Back to Suppliers</a>
+
+</body>
+</html>

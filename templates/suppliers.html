@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Suppliers</title>
+</head>
+<body>
+
+<h1>Suppliers</h1>
+
+<a href="/add-supplier">Add Supplier</a>
+
+<br><br>
+
+<table border="1">
+
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Address</th>
+        <th>Action</th>
+    </tr>
+
+    {% for supplier in suppliers %}
+
+    <tr>
+        <td>{{ supplier.id }}</td>
+        <td>{{ supplier.name }}</td>
+        <td>{{ supplier.phone }}</td>
+        <td>{{ supplier.address }}</td>
+
+        <td>
+
+            <a href="/edit-supplier/{{ supplier.id }}">
+                Edit
+            </a>
+
+            |
+
+            <a href="/delete-supplier/{{ supplier.id }}">
+                Delete
+            </a>
+
+        </td>
+
+    </tr>
+
+    {% endfor %}
+
+</table>
+
+<br>
+
+<a href="/">Dashboard</a>
+
+</body>
+</html>

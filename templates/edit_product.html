@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Product</title>
+</head>
+<body>
+
+<h1>Edit Product</h1>
+
+<form method="POST">
+
+    <p>Product Code</p>
+    <input
+        type="text"
+        name="product_code"
+        value="{{ product.product_code }}"
+        required>
+
+    <p>Product Name</p>
+    <input
+        type="text"
+        name="product_name"
+        value="{{ product.product_name }}"
+        required>
+
+    <p>Current Stock</p>
+    <input
+        type="number"
+        name="current_stock"
+        value="{{ product.current_stock }}"
+        required>
+
+    <p>Minimum Stock</p>
+    <input
+        type="number"
+        name="minimum_stock"
+        value="{{ product.minimum_stock }}"
+        required>
+
+    <p>Supplier</p>
+
+    <select name="supplier_id">
+
+        {% for supplier in suppliers %}
+
+        <option
+            value="{{ supplier.id }}"
+            {% if supplier.id == product.supplier_id %}
+            selected
+            {% endif %}
+        >
+            {{ supplier.name }}
+        </option>
+
+        {% endfor %}
+
+    </select>
+
+    <br><br>
+
+    <button type="submit">
+        Update Product
+    </button>
+
+</form>
+
+<br>
+
+<a href="/products">Back to Products</a>
+
+</body>
+</html>
